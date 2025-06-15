@@ -1,0 +1,38 @@
+.add-todo {
+  position: absolute;
+  top: -2em;
+  left: 50%; 
+}
+
+.todo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px;
+}
+
+.todo-input {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.todo-tasks {
+  width: 100%;
+}
+
+.remove-icon{
+  cursor: pointer;
+  color: #DD1220;
+  font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .add-todo {
+    position: absolute;
+    left: 42%;
+    border-radius: 0;
+    z-index: 1000;
+  }
+  
+}

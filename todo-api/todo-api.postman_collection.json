@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "6e074140-def5-446d-bb12-786479f24477",
+		"name": "Task App",
+		"description": "API to create a to do list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2044240"
+	},
+	"item": [
+		{
+			"name": "/task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task"
+					]
+				},
+				"description": "Get all tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "/task/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task/684b12c36a74aad4f31d10dd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task",
+						"684b12c36a74aad4f31d10dd"
+					]
+				},
+				"description": "Get task by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "/task/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task/684b12c36a74aad4f31d10dd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task",
+						"684b12c36a74aad4f31d10dd"
+					]
+				},
+				"description": "Delete a task"
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Minha task 01\",\r\n    \"done\": false \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task"
+					]
+				},
+				"description": "Create a task"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Minha task 01 - totalmente atualizada\",\r\n    \"done\": false \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task/684b12c36a74aad4f31d10dd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task",
+						"684b12c36a74aad4f31d10dd"
+					]
+				},
+				"description": "Replace a task by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Updata Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"done\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{version}}/task/684b12c36a74aad4f31d10dd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{version}}",
+						"task",
+						"684b12c36a74aad4f31d10dd"
+					]
+				},
+				"description": "Update a task partially"
+			},
+			"response": []
+		}
+	]
+}
