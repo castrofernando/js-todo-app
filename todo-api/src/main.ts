@@ -5,7 +5,7 @@ import * as bodyParser from 'body-parser'
 import helmet from 'helmet';
 
 async function bootstrap() {
-  const {NODE_ENV, PORT = 5000} = process.env;
+  const {NODE_ENV, PORT = 3001} = process.env;
   const logger = new ConsoleLogger({
       prefix: 'TaskApp',
       json: true,
@@ -35,6 +35,6 @@ async function bootstrap() {
 
 
   logger.log(`Environment: ${NODE_ENV} - Listening on port: ${PORT}`);
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3001);
 }
 bootstrap();
